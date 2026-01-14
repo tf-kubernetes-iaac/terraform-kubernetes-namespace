@@ -3,7 +3,7 @@
 ```
 module "namespace" {
   source  = "kaus33k/namespace/kubernetes"
-  version = "0.0.2"
+  version = "1.0.0"
 
   generate_name = true
   name_prefix   = "dev"
