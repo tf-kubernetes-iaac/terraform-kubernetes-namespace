@@ -3,7 +3,7 @@
 ```hcl
 module "namespace" {
   source  = "kaus33k/namespace/kubernetes"
-  version = "0.0.2"
+  version = "1.0.0"
 
   name = "frontend"
 
