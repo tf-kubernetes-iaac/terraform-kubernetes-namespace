@@ -48,3 +48,34 @@ variable "delete_timeouts"{
     description = "Define the delete timeouts for the namespace. Default : 5 Minutes"
     default     = "5m"
 }
+
+variable "create_custom_default_service_account" {
+  type = bool
+  description = "Create custom default service account for the targeted namespace."
+  default = false
+}
+
+// Variables for custom default service account resource
+variable "automount_service_account_token" {
+    type = bool
+    description = "Set Auto Mounting for token inside Pods"
+    default = false
+}
+
+variable "image_pull_secrets" {
+    description = "List of secrets that is used for pulling image"
+    type = list(string)
+    default = []
+}
+
+variable "mountable_secrets" {
+    description = "List of Mountable secrets to be used by pods"
+    type = list(string)
+    default = []
+}
+
+variable "create_token" {
+    description = "Create a service-account-token secret (required for K8s >=1.24)"
+    type = bool
+    default = false
+}
